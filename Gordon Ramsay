@@ -26,3 +26,12 @@ def get_all_tweets(screen_name):
         if(len(alltweets) > 15):
             break
         print "...%s tweets downloaded so far" % (len(alltweets))
+    file = open('tweet.json', 'w') 
+    print ("Writing tweet objects to JSON please wait..")
+    for status in alltweets:
+        json.dump(status._json,file,sort_keys = True,indent = 4)
+    print ("Done")
+    file.close()
+    
+if __name__ == '__main__':
+    get_all_tweets("@Gordon Ramsay")
