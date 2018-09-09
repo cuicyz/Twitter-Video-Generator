@@ -1,13 +1,28 @@
 import tweepy
+import json
 
-consumer_key=wCg7RGNZO9hAh5S0GHYsEZ3qT
-consumer_secrey=j61jEn79uBzjTISSSjaWoaO6e7A1EbuMEoJw8dK7oWGNBqjxvB
-access_token=1038575555799654400-uNs3cSIYBKx1JL2QPCSISDFiqEMJCw
-access_token_secret=nzK8wgBbJd8w3HotuZD4QnLaJ80n5hOrEGBeIYNr8XaJX 
+#API Settings
+consumer_key="wCg7RGNZO9hAh5S0GHYsEZ3qT"
+consumer_secrey="j61jEn79uBzjTISSSjaWoaO6e7A1EbuMEoJw8dK7oWGNBqjxvB"
+access_key="1038575555799654400-uNs3cSIYBKx1JL2QPCSISDFiqEMJCw"
+access_secret="nzK8wgBbJd8w3HotuZD4QnLaJ80n5hOrEGBeIYNr8XaJX"
 
-auth=tweepy.oAuthHandler(consumer_key,consumer_secret)
-auth.set_access_token(access)token,access_token_secret)
-api=tweepy.API(auth)
-print(api)
-search_results=api.search(q='Gordon Ramsay',count=20)
-print(tweet._json)
+def get_all_tweets(screen_name):
+
+    auth=tweepy.oAuthHandler(consumer_key,consumer_secret)
+    auth.set_access_token(accessa_key,access_secret)
+    api=tweepy.API(auth)
+    print(api)
+  
+    alltweets=[]
+    new_tweets=api.user_timeline(screen_name = screen_name,count=10)
+    alltweets.extend(new_tweets)
+  
+    oldest = alltweets[-1].id - 1
+    while len(new_tweets) > 0:
+        new_tweets = api.user_timeline(screen_name = screen_name,count=10,max_id=oldest)
+        alltweets.extend(new_tweets)
+        oldest = alltweets[-1].id - 1
+        if(len(alltweets) > 15):
+            break
+        print "...%s tweets downloaded so far" % (len(alltweets))
