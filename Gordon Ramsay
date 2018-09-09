@@ -1,17 +1,19 @@
 import tweepy
-from tweepy.auth import oAuthHandler
+from tweepy import OAuthHandler
+from tweepy import API
+from tweepy.auth import OAuthHandler
 import json
 
 #API Settings
 consumer_key="wCg7RGNZO9hAh5S0GHYsEZ3qT"
-consumer_secrey="j61jEn79uBzjTISSSjaWoaO6e7A1EbuMEoJw8dK7oWGNBqjxvB"
+consumer_secret="j61jEn79uBzjTISSSjaWoaO6e7A1EbuMEoJw8dK7oWGNBqjxvB"
 access_key="1038575555799654400-uNs3cSIYBKx1JL2QPCSISDFiqEMJCw"
 access_secret="nzK8wgBbJd8w3HotuZD4QnLaJ80n5hOrEGBeIYNr8XaJX"
 
 def get_all_tweets(screen_name):
 
-    auth=tweepy.oAuthHandler(consumer_key,consumer_secret)
-    auth.set_access_token(accessa_key,access_secret)
+    auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
+    auth.set_access_token(access_key,access_secret)
     api=tweepy.API(auth)
     print(api)
   
