@@ -1,0 +1,97 @@
+Last login: Mon Sep 17 22:57:31 on ttys000
+owners-MacBook-Pro:~ owner$ cd desktop
+owners-MacBook-Pro:desktop owner$ cd Mmq
+owners-MacBook-Pro:Mmq owner$ export GOOGLE_APPLICATION_CREDENTIALS="/Users/owner/Desktop/Mmq/label-42789e7da5b5.json"
+owners-MacBook-Pro:Mmq owner$ python goog.py
+For picture0:
+Labels:
+dish
+food
+cuisine
+dim sum
+baozi
+chinese food
+cha siu bao
+hotteok
+appetizer
+asian food
+For picture1:
+Labels:
+table
+tableware
+cutlery
+material
+For picture2:
+Labels:
+dish
+food
+cuisine
+venison
+meal
+meat
+lamb and mutton
+brunch
+For picture3:
+Labels:
+dish
+food
+venison
+meat
+vegetable
+garnish
+salad
+lamb and mutton
+recipe
+beef tenderloin
+For picture4:
+Labels:
+dessert
+food
+For picture5:
+Labels:
+food
+dish
+tableware
+dessert
+stemware
+For picture6:
+Labels:
+dish
+food
+vegetarian food
+recipe
+For picture7:
+Labels:
+dish
+food
+cuisine
+vegetarian food
+recipe
+For picture8:
+Labels:
+dessert
+dish
+food
+cuisine
+brunch
+breakfast
+For picture9:
+Labels:
+meal
+dish
+food
+brunch
+cuisine
+lunch
+breakfast
+tableware
+For picture10:
+Labels:
+dessert
+food
+For picture11:
+Labels:
+dish
+food
+recipe
+owners-MacBook-Pro:Mmq owner$ 
