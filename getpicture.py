@@ -3,10 +3,10 @@ from tweepy import OAuthHandler
 import json
 import wget
  
-consumer_key = 'wCg7RGNZO9hAh5S0GHYsEZ3qT'
-consumer_secret = 'j61jEn79uBzjTISSSjaWoaO6e7A1EbuMEoJw8dK7oWGNBqjxvB'
-access_token = '1038575555799654400-uNs3cSIYBKx1JL2QPCSISDFiqEMJCw'
-access_secret = 'nzK8wgBbJd8w3HotuZD4QnLaJ80n5hOrEGBeIYNr8XaJX'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_secret = ''
  
 @classmethod
 def parse(cls, api, raw):
