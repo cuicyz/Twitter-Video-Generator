@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 
 import os
+import PIL
+from PIL import Image
 
 class ImageRename():
     def __init__(self):
@@ -19,6 +21,19 @@ class ImageRename():
                 os.rename(src, dst)
                 i = i + 1
 
+    def resize(self):
+        filelist = os.listdir(self.path)
+        i=0
+        for item in filelist:
+            if item.endswith('.jpg'):
+                img=Image.open(item)
+                img_resized=img.resize((768,576),PIL.Image.ANTIALIAS)
+                img_resized.save('img'+format(str(i),'0>3s')+'.jpg')
+                i=i+1
+
+
+
 if __name__ == '__main__':
     newname = ImageRename()
     newname.rename()
+    newname.resize()
