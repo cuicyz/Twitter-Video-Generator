@@ -20,3 +20,6 @@ create table information
 insert into information values(1,"YuzhouCui","Mmq30584069",12,"/Users/owner/Desktop/601/Mini\ Project3/User1",60,"/Users/owner/Desktop/601/Mini\ Project3/User1","Food");
 insert into information values(2,"King","theblackpanther",189,"/Users/owner/Desktop/601/Mini\ Project3/User2",945,"/Users/owner/Desktop/601/Mini\ Project3/User2","Black Panther");
 insert into information values(3,"Captain","ChrisEvans",48,"/Users/owner/Desktop/601/Mini\ Project3/User3",240,"/Users/owner/Desktop/601/Mini\ Project3/User3","Captain America");
+
+#show table
+select * from information;
