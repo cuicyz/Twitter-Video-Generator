@@ -1,0 +1,39 @@
+#enter mongoldb
+mongo
+
+#choose(create) a database
+use miniproject3
+
+#put information into sets
+db.information.insert({id:1,
+username:'YuzhouCui',
+twitter_id:'Mmq30584069',
+number_of_pictures:12,
+location_of_pictures:'/Users/owner/Desktop/601/Mini\ Project3/User1',
+time_length_of_video:60,
+location_of_video:'/Users/owner/Desktop/601/Mini\ Project3/User1',
+keyword:'Food'
+})
+
+db.information.insert({id:2,
+username:'King',
+twitter_id:'theblackpanther',
+number_of_pictures:189,
+location_of_pictures:'/Users/owner/Desktop/601/Mini\ Project3/User2',
+time_length_of_video:945,
+location_of_video:'/Users/owner/Desktop/601/Mini\ Project3/User2',
+keyword:'Black Panther'
+})
+
+db.information.insert({id:3,
+username:'Captain',
+twitter_id:'ChrisEvans',
+number_of_pictures:48,
+location_of_pictures:'/Users/owner/Desktop/601/Mini\ Project3/User3',
+time_length_of_video:240,
+location_of_video:'/Users/owner/Desktop/601/Mini\ Project3/User3',
+keyword:'Captain America'
+})
+
+#show sets
+db.information.find()
